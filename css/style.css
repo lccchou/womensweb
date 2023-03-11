@@ -170,6 +170,8 @@ dd{
     font-family: "sans-serif", Arial, Helvetica;
     font-size: 14px;
     text-align: center;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 /* For desktop view */
@@ -199,4 +201,23 @@ dd{
         row-gap: 50px;
         margin: 0 auto;
     }
-} 
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+      scroll-behavior: auto; /* Removes scroll animation */
+    }
+    a.skip {
+      -webkit-transition: initial; /* sets to default setting */
+      transition: initial; /* sets to default setting */
+    }
+    .intro{
+      background-attachment: initial;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate {
+      /* Stop the animation */
+      animation: none;
+    }
+  }
