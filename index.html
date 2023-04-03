@@ -22,12 +22,15 @@
   <header>
     <a href="#main" class="skip">Skip to main content</a>
     <nav>
-        <ul class="navi">
+        <ul class="navi" id="nav-list">
           <li><a class="current" href="index.html">About</a></li>
           <li><a href="literature.html">Literature</a></li>
           <li><a href="history.html">History and Politics</a></li>
           <li><a href="femdict.html">Feminist Dictionary</a></li>
         </ul>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="js_click">
+          <i class="fa fa-bars"></i>
+        </a>
     </nav>
     <h1 id="borderimg"> Woman's Web </h1>
   </header>
@@ -69,7 +72,16 @@
       </p>
     </div>
   </main>
-
+  <script>
+    function myFunction() {
+      var x = document.getElementById("nav-list");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
   <footer>
     <i class="fa-regular fa-face-smile-wink"></i>
     <p class="thanks">

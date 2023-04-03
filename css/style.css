@@ -25,8 +25,18 @@ nav a{
     color: #35504B;
     font-family: "sans-serif", Arial, Helvetica;
     font-weight: bold;
+    display: flex;
 }
-
+nav a.icon{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px;
+}
+#nav-list{
+    display: none;
+}
 nav ul li{
     display: inline;
     text-align: center;
@@ -68,7 +78,7 @@ i{
     color: #111111;
 }
 .animate{
-    width: 300px;
+    width: 450px;
     position: relative;
     animation: fadein 8s;
 }
@@ -198,16 +208,13 @@ dd{
 
 /* For tablet view */
 @media screen and (min-width:600px){
-    .navi{
-        display: flex;
-        flex-direction: row;
-    }
     .animate{
         width: 650px;
     }
     .content p{
         padding-left: 25px;
         padding-right: 25px;
+        line-height: 22px;
     }
     .grid{
         display: grid;
@@ -220,12 +227,29 @@ dd{
         width: 90%;
         grid-template-columns: 1fr 1fr;
         column-gap: 20px;
+    }
+    nav a{
+        margin-bottom: 10px;
+    }
+    nav a.icon{
+        visibility: hidden;
+    }
+    #nav-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    dd > p{
+        line-height: 22px;
     } 
 }
 
 /* For desktop view */
 @media screen and (min-width:1200px){
-    .navi{
+    .animate{
+        width: 1200px;
+    }
+    #nav-list{
         display: flex;
         flex-direction: row;
     }
@@ -250,6 +274,12 @@ dd{
         row-gap: 50px;
         margin: 0 auto;
     }
+    .content p{
+        line-height: 22px;
+    }
+    dd > p{
+        line-height: 22px;
+    } 
 }
 
 @media screen and (prefers-reduced-motion: reduce){
